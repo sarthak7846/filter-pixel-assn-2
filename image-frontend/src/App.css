@@ -1,0 +1,45 @@
+.image-upload {
+  margin: 1% 34%;
+}
+
+.spinner {
+  margin: 7% 50%;
+  height: 0%;
+  width: 3%;
+}
+
+.preview-and-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.editing-controls {
+  width: 30%;
+}
+
+.imagePrv {
+  width: 700px;
+  height: 400px;
+}
+
+.responsive-img {
+  height: 90%;
+}
+
+.editing-control {
+  margin: 3%;
+}
+
+.image-prev-heading {
+  font-size: larger;
+  font-weight: 600;
+  margin: 2% 35%;
+}
+
+.upload-btn {
+  margin-left: 4%;
+}
+
+.download-btn {
+  margin: 1% 45%;
+}
