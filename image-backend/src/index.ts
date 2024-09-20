@@ -24,6 +24,8 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: frontendOrigin,
+    methods: ["GET", "POST"],
+    credentials: true,
   },
   transports: ["websocket", "polling"],
 });
