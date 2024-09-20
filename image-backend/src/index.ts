@@ -6,13 +6,15 @@ import { Server } from "socket.io";
 import http from "http";
 import fs from "fs/promises";
 import { v4 as uuidv4 } from "uuid";
+import dotenv from "dotenv";
 
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
-const port = 8000;
+dotenv.config({ path: path.join(__dirname, "../.env") });
+const port = process.env.SERVER_PORT || 8000;
 
 const server = http.createServer(app);
 const io = new Server(server, {
