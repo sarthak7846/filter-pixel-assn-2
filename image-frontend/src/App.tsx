@@ -8,7 +8,7 @@ import { DownloadControl } from "./components/DownloadControl";
 import { ImageEditingValues } from "./interfaces/ImageEditingValues";
 import { Loader2 } from "lucide-react";
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 const socket = io(BASE_URL);
 
 export const SocketInstanceCtx = createContext(socket);
