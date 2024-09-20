@@ -25,6 +25,7 @@ const io = new Server(server, {
   cors: {
     origin: frontendOrigin,
   },
+  transports: ["websocket", "polling"],
 });
 
 io.on("connection", (socket) => {
