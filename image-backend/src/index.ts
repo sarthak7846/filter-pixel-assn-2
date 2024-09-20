@@ -16,10 +16,14 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 dotenv.config({ path: path.join(__dirname, "../.env") });
 const port = process.env.SERVER_PORT || 8000;
 
+const frontendOrigin = process.env.FRONTEND_ORIGIN || "http://localhost:5173";
+
+console.log(frontendOrigin);
+
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: frontendOrigin,
   },
 });
 
